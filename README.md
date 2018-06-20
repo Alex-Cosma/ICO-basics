@@ -17,3 +17,6 @@
     - Online Solidity development environment
     - can deploy smart contracts
     - can debug code
+5. https://goo.gl/363WKg
+    - put your addresses here
+    - easily transfer tokens between one another
