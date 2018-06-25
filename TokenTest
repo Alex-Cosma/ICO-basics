@@ -90,7 +90,7 @@ contract FixedSupplyToken is ERC20Interface, Owned {
     // Total supply
     // ------------------------------------------------------------------------
     function totalSupply() public view returns (uint) {
-        return _totalSupply.sub(balances[address(0)]);
+        return _totalSupply;
     }
 
 
@@ -154,14 +154,6 @@ contract FixedSupplyToken is ERC20Interface, Owned {
     // ------------------------------------------------------------------------
     function allowance(address tokenOwner, address spender) public view returns (uint remaining) {
         return allowed[tokenOwner][spender];
-    }
-
-
-    // ------------------------------------------------------------------------
-    // Don't accept ETH
-    // ------------------------------------------------------------------------
-    function () public payable {
-        revert();
     }
 
 }
